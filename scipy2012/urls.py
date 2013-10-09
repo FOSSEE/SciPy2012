@@ -14,6 +14,6 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^2012/', include('conference.urls', namespace='conference')),
+    url(r'^', include('conference.urls', namespace='conference')),
     url(r'^admin/', include(admin.site.urls)),
 )
