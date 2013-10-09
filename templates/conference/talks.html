@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h3>List of Talks</h3>
+<table>
+<th>Title
+<th>Speaker
+{% for talk in talks %}
+<tr><td><a href="{{ URL_ROOT }}/details/{{ talk.id }}">{{ talk.title }}<td>{{ talk.speaker }}
+{% endfor %}
+</table>
+{% endblock %}
+
