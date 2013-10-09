@@ -14,6 +14,10 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^2012/', include('conference.urls', namespace='conference')),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', home, name="home"),
+    url(r'^keynote/', keynote, name="keynote"),    
+    url(r'^tutorials/', tutorials, name="tutorials"),
+    url(r'^talks/', talks, name="talks"),
+    url(r'^sponsors/', sponsors, name="sponsors"),
+    url(r'^details/(?P<talktutorial_id>\d+)/$', details, name="details"),
 )

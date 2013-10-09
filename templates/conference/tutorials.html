@@ -8,7 +8,7 @@
 <th>Title
 <th>Speaker
 {% for tutorial in tutorials %}
-<tr><td><a href="{{ URL_ROOT }}/details/{{ tutorial.id }}">{{ tutorial.title }}<td>{{ tutorial.speaker }}
+<tr><td><a href="{% url 'conference:details' tutorial.id %}">{{ tutorial.title }}<td>{{ tutorial.speaker }}
 {% endfor %}
 </table>
 {% endblock %}

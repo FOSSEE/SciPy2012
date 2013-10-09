@@ -7,7 +7,7 @@
 </title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link rel="stylesheet" href="{{ URL_ROOT }}/static/css/default.css" type="text/css" /> 
+<link rel="stylesheet" href="{{ STATIC_URL }}/css/default.css" type="text/css" /> 
 </head>
 <body>
 <div id="header-wrapper">
@@ -22,13 +22,13 @@
 				    <a href="#" accesskey="2" title="">Conference</a>
 				    <ul>
 				        <div class="arrow-up"></div>
-				        <li><a href="{{ URL_ROOT }}/keynote">Keynote</a></li>
-				        <li><a href="{{ URL_ROOT }}/tutorials">Tutorials</a></li>
-				        <li><a href="{{ URL_ROOT }}/talks">Talks</a></li>
+				        <li><a href="{% url 'conference:keynote' %}">Keynote</a></li>
+				        <li><a href="{% url 'conference:tutorials' %}">Tutorials</a></li>
+				        <li><a href="{% url 'conference:talks' %}">Talks</a></li>
 				        <li><a href="https://plus.google.com/photos/108547534465492743329/albums/5830648864137819041?banner=pwa" target=_blank>Image Gallery</a></li>
 				    </ul>
                 </li>
-				<li><a href="{{ URL_ROOT }}/sponsors" accesskey="3" title="">Sponsors</a></li>
+				<li><a href="{% url 'conference:sponsors' %}" accesskey="3" title="">Sponsors</a></li>
 				<li><a href="#" accesskey="4" title="">About</a></li>
 			</ul>
 		</div>
