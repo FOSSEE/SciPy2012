@@ -7,6 +7,6 @@
 <iframe src="{{ detail.video }}" allowFullScreen webkitallowFullScreen mozallowFullScreen width=616 height=407 rel=nofollow> </iframe> 
 
 <p>By: {{ detail.speaker }}</p>
-<a href="{{ detail.slides }}">Download Slides</a>
+<a href="{% static 'files/' %}{{ detail.slides }}">Download Slides</a>
 {% endblock %}
 
