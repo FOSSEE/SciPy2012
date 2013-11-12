@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>{{ detail.title }}</h2>
+<p>{{ detail.abstract }}</p>
+<iframe src="{{ detail.video }}" allowFullScreen webkitallowFullScreen mozallowFullScreen width=616 height=407 rel=nofollow> </iframe> 
+
+<p>By: {{ detail.speaker }}</p>
+<a href="{{ detail.slides }}">Download Slides</a>
+{% endblock %}
+
