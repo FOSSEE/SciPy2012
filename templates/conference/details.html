@@ -4,9 +4,18 @@
 {% block content %}
 <h2>{{ detail.title }}</h2>
 <p>{{ detail.abstract }}</p>
+
+{% if slides %}
 <iframe src="{{ detail.video }}" allowFullScreen webkitallowFullScreen mozallowFullScreen width=616 height=407 rel=nofollow> </iframe> 
+{% else %}
+<p>Sorry, Video for this talk is not available.</p>
+{% endif %}
 
 <p>By: {{ detail.speaker }}</p>
-<a href="2012/static/files/{{ detail.slides }}">Download Slides</a>
+{% if slides %}
+<a href="{% static 'files/' %}{{ detail.slides }}">Download Slides</a>
+{% else %}
+<p>Sorry, Slides for this talk are not available.</p>
+{% endif %}
 {% endblock %}
 
