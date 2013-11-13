@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
@@ -7,7 +8,7 @@
 </title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<link rel="stylesheet" href="/2012/static/css/default.css" type="text/css" /> 
+<link rel="stylesheet" href="{% static 'css/default.css'%}" type="text/css" /> 
 </head>
 <body>
 <div id="header-wrapper">
@@ -29,7 +30,6 @@
 				    </ul>
                 </li>
 				<li><a href="{% url 'conference:sponsors' %}" accesskey="3" title="">Sponsors</a></li>
-				<li><a href="#" accesskey="4" title="">About</a></li>
 			</ul>
 		</div>
 	</div>
@@ -45,8 +45,19 @@
 			<div class="title">
 				<h2>SciPy India 2012</h2>
 				<span class="byline">Conference on Python for Education & Scientific Computing</span> </div>
-			<p><strong>SciPy India</strong>, a free, fully standards-compliant CSS template designed by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attributions 3.0</a> license, so you are pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :) </p>
-	<a href="#" class="button">Lear More</a> </div>
+			<p><strong>SciPy India</strong>, a conference providing opportunities to spread the use of 
+          the Python programming language in the Scientific Computing community 
+          in India. It provides a unique opportunity to interact with the "Who's 
+          who" of the Python for Scientific Computing fraternity and learn, 
+          understand, participate, and contribute to Scientific Computing using 
+          Python. Attendees of the conference and participants of the sprints 
+          planned will be able to access and review the tools available. They 
+          will also be able to learn domain-specific applications and how the 
+          tools apply to a plethora of application problems.
+          One of the goals of the conference is to combine education, engineering, 
+          and science with computing through the medium of Python. This conference 
+          also aims to spread the use of Python for Scientific Computing in 
+          various fields and among different communities. This was the 4th Consecutive year of the conference. </p>
 	</div>
 {% endblock %}
 </div>
