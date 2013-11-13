@@ -2,16 +2,29 @@
 {% load static %}
 {% block content %}
 
-<p><h2>Keynote by Dr. Ole Nielsen</h2></p>
-<div>
-<p>Ole Nielsen has been an Open Source adopter, promotor and developer since the early nineties during his career as technical consultant, academic researcher, government scientist and development professional within an aid organisation. Ole has a double Master's degree in Mathematics and Computer Science as well as a PhD in scientific computing from universities in Denmark. Ole joined AusAID in Jakarta in 2010 to support the Indonesian government in multi-hazard disaster risk reduction. </p>
+<h2 align="center"><u>Keynote by Dr. Ole Nielsen</u></h2> <br>
+<div class="wrap">
+    <div class="sponsor">
+    <img src="{% static 'images/ole.jpg' %}" style="width: 15%;"> <br>
+    <p style="width: 80%">
+        Ole Nielsen has been an Open Source adopter, promotor and developer 
+        since the early nineties during his career as technical consultant, 
+        academic researcher, government scientist and development professional 
+        within an aid organisation. Ole has a double Master's degree in 
+        Mathematics and Computer Science as well as a PhD in scientific computing 
+        from universities in Denmark. Ole joined AusAID in Jakarta in 2010 to 
+        support the Indonesian government in multi-hazard disaster risk reduction. 
+    </p>
+    <div class="clearfix"></div>
+    </div>
+<br>
+    <div class="wrap" style="text-align: center;">
+    <iframe src="http://urtalk.kpoint.com/kapsule/gcc-7f6d80fa-7e37-4693-a9c3-08eaa23cfd22/v1/embedded?size=M" allowFullScreen webkitallowFullScreen mozallowFullScreen width="616" height="407" rel="nofollow"> </iframe>
+    <br>
+    <a href=" {% static 'slides/geoprocessing.zip' %}">Download Slides</a>
+    </div> <!-- /inner wrap -->
+<br>
 
-<image src="{% static 'images/ole.jpg' %}">
-
-<iframe src="http://urtalk.kpoint.com/kapsule/gcc-7f6d80fa-7e37-4693-a9c3-08eaa23cfd22/v1/embedded?size=M" allowFullScreen webkitallowFullScreen mozallowFullScreen width="616" height="407" rel="nofollow"> </iframe> 
-
-<a href=" {% static 'slides/geoprocessing.zip' %}">Download Slides</a>
-
-
+</div> <!-- /wrap -->
 {% endblock %}
 

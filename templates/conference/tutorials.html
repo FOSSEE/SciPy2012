@@ -1,15 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-
-<h3>List of Tutorials</h3>
+<h2 align="center"><u>List of Tutorials</u></h2> <br>
 <table>
-<th>Title
-<th>Speaker
+<th>Title</th>
+<th>Speaker</th>
 {% for tutorial in tutorials %}
-<tr><td><a href="{% url 'conference:details' tutorial.id %}">{{ tutorial.title }}<td>{{ tutorial.speaker }}
+<tr>
+    <td>
+        <a href="{% url 'conference:details' tutorial.id %}">{{ tutorial.title }}</a>
+    </td>
+    <td>
+        {{ tutorial.speaker }}
+    </td>
+</tr>
 {% endfor %}
 </table>
 {% endblock %}
-

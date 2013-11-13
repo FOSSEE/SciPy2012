@@ -2,20 +2,24 @@
 {% load static %}
 
 {% block content %}
-<h2>{{ detail.title }}</h2>
-<p>{{ detail.abstract }}</p>
+<h2 align="center"> <u>{{ detail.title }}</u> </h2>
+<br>
+<div class="wrap" style="text-align: center;">
+    <p>{{ detail.abstract }}</p>
 
-{% if video %}
-<iframe src="{{ detail.video }}" allowFullScreen webkitallowFullScreen mozallowFullScreen width=616 height=407 rel=nofollow> </iframe> 
-{% else %}
-<p>Sorry, Video for this talk is not available.</p>
-{% endif %}
+    {% if video %}
+    <iframe src="{{ detail.video }}" allowFullScreen webkitallowFullScreen mozallowFullScreen width=616 height=407 rel=nofollow> </iframe> 
+    {% else %}
+    <p>Sorry, Video for this talk is not available.</p>
+    {% endif %}
 
-<p>By: {{ detail.speaker }}</p>
-{% if slides %}
-<a href="{% static 'files/' %}{{ detail.slides }}">Download Slides</a>
-{% else %}
-<p>Sorry, Slides for this talk are not available.</p>
-{% endif %}
+    <p>By: {{ detail.speaker }}</p>
+    {% if slides %}
+    <a href="{% static 'files/' %}{{ detail.slides }}">Download Slides</a>
+    {% else %}
+    <p>Sorry, Slides for this talk are not available.</p>
+    {% endif %}
+    <br> <br>
+</div> <!-- /wrap -->
 {% endblock %}
 
