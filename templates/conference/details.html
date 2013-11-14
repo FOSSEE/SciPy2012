@@ -15,7 +15,7 @@
 
     <p>By: {{ detail.speaker }}</p>
     {% if slides %}
-    <a href="{% static %}{{ detail.slides }}">Download Slides</a>
+    <a href="{% static '' %}{{ detail.slides }}">Download Slides</a>
     {% else %}
     <p>Sorry, Slides for this talk are not available.</p>
     {% endif %}
